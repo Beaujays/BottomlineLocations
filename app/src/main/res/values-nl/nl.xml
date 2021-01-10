@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bottomline Locations</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_addSiteDefect">Voeg een site defect toe</string>
+    <string name="menu_listSiteDefects">Lijst van site defects</string>
+    <string name="edit_text_name">Naam station</string>
+    <string name="edit_text_address">Adres</string>
+    <string name="edit_text_city">Stad</string>
+    <string name="edit_text_description">Omschrijving</string>
+    <string name="edit_text_zipcode">Postcode</string>
+    <string name="take_a_picture">Maak een foto</string>
+    <string name="save_and_mail">Opslaan en versturen</string>
+    <string name="delete_site_defect">Verwijder site defect</string>
+    <string name="get_location">Zoek locatie</string>
+    <string name="image_viewer">Image viewer</string>
+    <string name="log_out">Uitloggen</string>
+    <string name="select_a_language">Selecteer een taal</string>
+    <string name="language_dutch">Nederlands</string>
+    <string name="language_english">Engels</string>
+    <string name="get_last_language">Pak de laatste taal</string>
+    <string name="find_station">Zoek station</string>
+    <string name="title_activity_search">Zoek station</string>
+
+</resources>

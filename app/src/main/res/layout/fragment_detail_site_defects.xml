@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="siteDefects"
+            type="com.example.bottomlinelocations.data.SiteDefects" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DetailSiteDefectsFragment">
+
+        <TextView
+            android:id="@+id/editText_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#F8F6F6"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{siteDefects.siteName}"
+            app:layout_constraintBottom_toTopOf="@+id/textViewAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/editText_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#F8F6F6"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{siteDefects.city}"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCity"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/editText_zipcode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#F8F6F6"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{siteDefects.zipcode}"
+            app:layout_constraintBottom_toTopOf="@+id/textViewCity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewZipcode"
+            app:layout_constraintTop_toBottomOf="@+id/textViewZipcode"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/editText_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#F8F6F6"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:text="@{siteDefects.address}"
+            app:layout_constraintBottom_toTopOf="@+id/textViewZipcode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewAddress"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAddress"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/editText_description"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#F8F6F6"
+            android:ems="10"
+            android:gravity="start|top"
+            android:importantForAutofill="no"
+            android:text="@{siteDefects.description}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/edit_text_name"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editText_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/edit_text_address"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editText_address"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+        <TextView
+            android:id="@+id/textViewZipcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/edit_text_zipcode"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editText_zipcode"
+            app:layout_constraintStart_toStartOf="@+id/editText_address"
+            app:layout_constraintTop_toBottomOf="@+id/editText_address" />
+
+        <TextView
+            android:id="@+id/textViewCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/edit_text_city"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editText_city"
+            app:layout_constraintStart_toStartOf="@+id/editText_zipcode"
+            app:layout_constraintTop_toBottomOf="@+id/editText_zipcode"
+            app:layout_constraintVertical_bias="0.421" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/edit_text_description"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editText_description"
+            app:layout_constraintStart_toStartOf="@+id/editText_city"
+            app:layout_constraintTop_toBottomOf="@+id/editText_city" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            android:contentDescription="@string/delete_site_defect"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/editText_imageName"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#F8F6F6"
+            android:ems="10"
+            android:gravity="start|top"
+            android:importantForAutofill="no"
+            android:text="@{siteDefects.description}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+            tools:ignore="LabelFor" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="350dp"
+            android:layout_height="271dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Image loader"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_description"
+            app:layout_constraintVertical_bias="0.263"
+            app:srcCompat="@drawable/ic_menu_gallery"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

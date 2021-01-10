@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bottomlinelocations.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_addSiteDefect"
+        android:name="com.example.bottomlinelocations.ui.addSiteDefect.AddSiteDefectFragment"
+        android:label="@string/menu_addSiteDefect"
+        tools:layout="@layout/fragment_add_site_defects" >
+        <action
+            android:id="@+id/action_nav_addSiteDefect_to_nav_listSiteDefects"
+            app:destination="@id/nav_listSiteDefects" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_listSiteDefects"
+        android:name="com.example.bottomlinelocations.ui.listSiteDefects.ListSiteDefectsFragment"
+        android:label="@string/menu_listSiteDefects"
+        tools:layout="@layout/fragment_list_site_defects" >
+        <action
+            android:id="@+id/action_nav_listSiteDefects_to_nav_addSiteDefect"
+            app:destination="@id/nav_addSiteDefect" />
+        <action
+            android:id="@+id/action_nav_listSiteDefects_to_detailSiteDefectsFragment"
+            app:destination="@id/detailSiteDefectsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSiteDefectsFragment"
+        android:name="com.example.bottomlinelocations.ui.detailSiteDefect.DetailSiteDefectsFragment"
+        android:label="Site defect"
+        tools:layout="@layout/fragment_detail_site_defects">
+        <argument
+            android:name="SiteId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailSiteDefectsFragment_to_nav_listSiteDefects"
+            app:destination="@id/nav_listSiteDefects" />
+    </fragment>
+    <activity
+        android:id="@+id/searchActivity"
+        android:name="com.example.bottomlinelocations.ui.maps.SearchActivity"
+        android:label="@string/title_activity_search"
+        tools:layout="@layout/activity_search" />
+
+</navigation>

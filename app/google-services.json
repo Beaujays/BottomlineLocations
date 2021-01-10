@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957685043263",
+    "project_id": "bottomlinelocations",
+    "storage_bucket": "bottomlinelocations.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957685043263:android:da434adf7acca112c0288a",
+        "android_client_info": {
+          "package_name": "com.example.bottomlinelocations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957685043263-ab0bkc2dnntidnbe6ibg7nac57ks5qrd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClP4XrcMhPh2oTK7yfK-23HPS6gMS7B7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957685043263-ab0bkc2dnntidnbe6ibg7nac57ks5qrd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
