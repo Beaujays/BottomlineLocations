@@ -1,0 +1,226 @@
+@startuml
+
+title __BOTTOMLINELOCATIONS.APP's Class Diagram__\n
+
+  namespace androidx.databinding {
+    class androidx.databinding.DataBinderMapperImpl {
+    }
+  }
+  
+
+  namespace androidx.databinding {
+    interface androidx.databinding.DataBindingComponent {
+    }
+  }
+  
+
+  namespace androidx.databinding {
+    namespace library.baseAdapters {
+      class androidx.databinding.library.baseAdapters.BR {
+      }
+    }
+  }
+  
+
+  namespace com.bumptech.glide {
+    class com.bumptech.glide.GeneratedAppGlideModuleImpl {
+    }
+  }
+  
+
+  namespace com.bumptech.glide {
+    class com.bumptech.glide.GeneratedRequestManagerFactory {
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace API {
+      class com.example.bottomlinelocations.API.GlideApp {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace API {
+      class com.example.bottomlinelocations.API.GlideOptions {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace API {
+      class com.example.bottomlinelocations.API.GlideRequest {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace API {
+      class com.example.bottomlinelocations.API.GlideRequests {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    class com.example.bottomlinelocations.BR {
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    class com.example.bottomlinelocations.BuildConfig {
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    class com.example.bottomlinelocations.DataBinderMapperImpl {
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      class com.example.bottomlinelocations.data.SettingsDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      namespace ase {
+        class com.example.bottomlinelocations.database.MyRoomDatabase_Impl {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      namespace inding {
+        class com.example.bottomlinelocations.databinding.ActivityMainBindingImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      namespace inding {
+        class com.example.bottomlinelocations.databinding.FragmentAddSiteDefectsBindingImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      namespace inding {
+        class com.example.bottomlinelocations.databinding.FragmentDetailSiteDefectsBindingImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      namespace inding {
+        class com.example.bottomlinelocations.databinding.FragmentHomeBindingImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      namespace inding {
+        class com.example.bottomlinelocations.databinding.FragmentListSiteDefectsBindingImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace data {
+      namespace inding {
+        class com.example.bottomlinelocations.databinding.ViewSiteDefectsItemBindingImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace ui.addSiteDefect {
+      class com.example.bottomlinelocations.ui.addSiteDefect.AddSiteDefectFragmentDirections {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace ui.detailSiteDefect {
+      class com.example.bottomlinelocations.ui.detailSiteDefect.DetailSiteDefectsFragmentArgs {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace ui.detailSiteDefect {
+      class com.example.bottomlinelocations.ui.detailSiteDefect.DetailSiteDefectsFragmentDirections {
+      }
+    }
+  }
+  
+
+  namespace com.example.bottomlinelocations {
+    namespace ui.listSiteDefects {
+      class com.example.bottomlinelocations.ui.listSiteDefects.ListSiteDefectsFragmentDirections {
+      }
+    }
+  }
+  
+
+  androidx.databinding.DataBinderMapperImpl -up-|> androidx.databinding.MergedDataBinderMapper
+  com.bumptech.glide.GeneratedAppGlideModuleImpl -up-|> com.bumptech.glide.GeneratedAppGlideModule
+  com.bumptech.glide.GeneratedAppGlideModuleImpl o-- com.example.bottomlinelocations.API.AppGlide : appGlideModule
+  com.bumptech.glide.GeneratedRequestManagerFactory .up.|> com.bumptech.glide.manager.RequestManagerRetriever.RequestManagerFactory
+  com.example.bottomlinelocations.API.GlideOptions .up.|> java.lang.Cloneable
+  com.example.bottomlinelocations.API.GlideOptions -up-|> com.bumptech.glide.request.RequestOptions
+  com.example.bottomlinelocations.API.GlideRequest .up.|> java.lang.Cloneable
+  com.example.bottomlinelocations.API.GlideRequest -up-|> com.bumptech.glide.RequestBuilder
+  com.example.bottomlinelocations.API.GlideRequests -up-|> com.bumptech.glide.RequestManager
+  com.example.bottomlinelocations.DataBinderMapperImpl -up-|> androidx.databinding.DataBinderMapper
+  com.example.bottomlinelocations.data.SettingsDAO_Impl .up.|> com.example.bottomlinelocations.data.SettingsDAO
+  com.example.bottomlinelocations.database.MyRoomDatabase_Impl -up-|> com.example.bottomlinelocations.database.MyRoomDatabase
+  com.example.bottomlinelocations.database.MyRoomDatabase_Impl o-- com.example.bottomlinelocations.data.SettingsDAO : _settingsDAO
+  com.example.bottomlinelocations.databinding.ActivityMainBindingImpl -up-|> com.example.bottomlinelocations.databinding.ActivityMainBinding
+  com.example.bottomlinelocations.databinding.FragmentAddSiteDefectsBindingImpl -up-|> com.example.bottomlinelocations.databinding.FragmentAddSiteDefectsBinding
+  com.example.bottomlinelocations.databinding.FragmentDetailSiteDefectsBindingImpl -up-|> com.example.bottomlinelocations.databinding.FragmentDetailSiteDefectsBinding
+  com.example.bottomlinelocations.databinding.FragmentHomeBindingImpl -up-|> com.example.bottomlinelocations.databinding.FragmentHomeBinding
+  com.example.bottomlinelocations.databinding.FragmentListSiteDefectsBindingImpl -up-|> com.example.bottomlinelocations.databinding.FragmentListSiteDefectsBinding
+  com.example.bottomlinelocations.databinding.ViewSiteDefectsItemBindingImpl -up-|> com.example.bottomlinelocations.databinding.ViewSiteDefectsItemBinding
+  com.example.bottomlinelocations.ui.detailSiteDefect.DetailSiteDefectsFragmentArgs .up.|> androidx.navigation.NavArgs
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

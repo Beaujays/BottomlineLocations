@@ -14,7 +14,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".ui.addSiteDefect.AddSiteDefectFragment">
 
         <EditText
@@ -179,7 +179,7 @@
             android:contentDescription="@string/image_viewer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_description"/>
+            app:layout_constraintTop_toBottomOf="@+id/editText_description" />
 
         <Switch
             android:id="@+id/getLocation"

@@ -267,7 +267,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("", result)
         } catch (e: Exception) {
             e.printStackTrace()
-            Log.w("", "Can't get Address!")
+            Toast.makeText(this, "Can't get address", Toast.LENGTH_LONG).show()
         } finally {
             // Set result in handler
             val message = Message.obtain()

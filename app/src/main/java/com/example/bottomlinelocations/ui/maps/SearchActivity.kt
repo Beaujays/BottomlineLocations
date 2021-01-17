@@ -42,7 +42,6 @@ class SearchActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
     private lateinit var locationCallback: LocationCallback
     private lateinit var locationRequest: LocationRequest
     private var locationUpdateState = false
-    //var arrayList_details: ArrayList<Sites> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -265,28 +264,4 @@ class SearchActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
         private const val REQUEST_CHECK_SETTINGS = 2
         private const val PLACE_PICKER_REQUEST = 3
     }
-
-    /*private fun makeApiCall(location: Location) {
-        val request = Request.Builder()
-            .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.latitude},${location.longitude}&radius=1500&type=restaurant&key=AIzaSyDTZLVjIMzPJkvRVUX_9xFfvG7GwKIBGL4")
-            .build()
-        val response = OkHttpClient().newCall(request).execute().body().string()
-        val jsonObject = JSONObject(response) // This will make the json below as an object for you
-        val jsonArray: JSONArray = jsonObject.getJSONArray("results")
-        var i = 0
-        val size: Int = jsonArray.length()
-        arrayList_details = ArrayList()
-        for (i in 0 until size) {
-            //val json_objectdetail: JSONObject = jsonArray.getJSONObject(i)
-                (jsonArray.getJSONObject(0)
-                .getJSONObject("geometry").getJSONObject("location")
-                .getDouble("lng")) + "," +
-                        (jsonArray.getJSONObject(0)
-                    .getJSONObject("geometry").getJSONObject("location")
-                    .getDouble("lat"))
-        }
-        // You can access all the attributes , nested ones using JSONArray and JSONObject here
-    }
-
-     */
 }

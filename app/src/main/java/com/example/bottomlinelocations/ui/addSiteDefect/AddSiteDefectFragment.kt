@@ -19,13 +19,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.bottomlinelocations.ui.MainActivity
 import com.example.bottomlinelocations.MyApplication
 import com.example.bottomlinelocations.R
 import com.example.bottomlinelocations.data.SiteDefects
 import com.example.bottomlinelocations.databinding.FragmentAddSiteDefectsBinding
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
+import com.example.bottomlinelocations.ui.MainActivity
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -52,7 +50,6 @@ class AddSiteDefectFragment : Fragment() {
     private lateinit var remark: EditText
     private lateinit var image: ImageView
     private var picId: Int = -1
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     @SuppressLint("MissingPermission")
     override fun onCreateView(
@@ -67,7 +64,6 @@ class AddSiteDefectFragment : Fragment() {
             container,
             false
         )
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
         // Binding layout field with variable value
         name = binding.editTextName
         address = binding.editTextAddress
@@ -122,9 +118,7 @@ class AddSiteDefectFragment : Fragment() {
                                 "Kind regards."
                     )
                     .intent
-
                 startActivity(intent)
-
 
                 // Save site defect in database
                 Log.i("buttonSave", "Not empty filled with ${name.text}")
@@ -145,7 +139,7 @@ class AddSiteDefectFragment : Fragment() {
                     // Add in Fire store
                     addSiteDefectViewModel.insert(siteDefects)
                 }
-
+                Toast.makeText(context,"Added site defect", Toast.LENGTH_LONG).show()
             }
             findNavController().navigate(R.id.action_nav_addSiteDefect_to_nav_listSiteDefects)
         }
